@@ -49,9 +49,10 @@ public class MapZone : MonoBehaviour
             }
         }
 
-        if (!gm.calificado = true && gm.StarsDictionary["Z1N2"])
+        if (!gm.calificado && GameManager.StarsDictionary["Z1N2"])
             {
-                gm.LoadScene("Calificar")
+                gm.calificado = true;
+                gm.LoadScene("Calificar");
             }
     }
 
