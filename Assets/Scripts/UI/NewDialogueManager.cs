@@ -104,14 +104,14 @@ public class NewDialogueManager : MonoBehaviour
                     charA.sprite = StartCutscene.Dialogues[index].CharArt;
                     charA.color = new Color(1, 1, 1, 1f);
 
-                    charB.color = new Color(1, 1, 1, 0.5f);
+                    charB.color = new Color(0.3f, 0.3f, 0.3f, 1);
                 }
                 else
                 {
                     charB.sprite = StartCutscene.Dialogues[index].CharArt;
                     charB.color = new Color(1, 1, 1, 1f);
 
-                    charA.color = new Color(1, 1, 1, 0.5f);
+                    charA.color = new Color(0.3f, 0.3f, 0.3f, 1);
                 }
 
                 if (charA.sprite == null)
@@ -173,14 +173,14 @@ public class NewDialogueManager : MonoBehaviour
                     charA.sprite = EndCutscene.Dialogues[index].CharArt;
                     charA.color = new Color(1, 1, 1, 1f);
 
-                    charB.color = new Color(1, 1, 1, 0.5f);
+                    charB.color = new Color(0.3f, 0.3f, 0.3f, 1);
                 }
                 else
                 {
                     charB.sprite = EndCutscene.Dialogues[index].CharArt;
                     charB.color = new Color(1, 1, 1, 1f);
 
-                    charA.color = new Color(1, 1, 1, 0.5f);
+                    charA.color = new Color(0.3f, 0.3f, 0.3f, 1);
                 }
 
                 if (charA.sprite == null)
