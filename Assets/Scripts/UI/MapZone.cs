@@ -48,6 +48,11 @@ public class MapZone : MonoBehaviour
                 Deudas[i].SetActive(false);
             }
         }
+
+        if (!gm.calificado = true && gm.StarsDictionary["Z1N2"])
+            {
+                gm.LoadScene("Calificar")
+            }
     }
 
     public void LoadLevel(string levelName)

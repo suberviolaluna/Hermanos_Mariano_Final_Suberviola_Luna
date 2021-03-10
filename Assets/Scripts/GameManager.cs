@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int bulletCounter = 0;
 
+    [HideInInspector]
+    public bool calificado = false;
+
     private void Awake()
     {
         //No tocar, permite mantener al gamemanager en todas las escenas y poder probar todos los niveles sin tener que empezar desde el menu
