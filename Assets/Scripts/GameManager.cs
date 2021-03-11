@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     Player player;
 
-    int levelIndex;
+    public int levelIndex;
     public string level;
 
     [Header("Datos que se mantienen")]
@@ -280,6 +280,15 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Gano");
         victory = true;
         resetCount = 0;
+
+        string levelCode = "Z" + GetZone(levelIndex) + "N" + LevelIndexer(level);
+        if(LevelIndexer(level) != 4 && StarsDictionary[levelCode])
+        {
+            UserInterface ui = FindObjectOfType<UserInterface>();
+            ui.Victory(ui.gananciaMaxBK, false);
+            return;
+        }
+
         FindObjectOfType<CutsceneManager>().onVictory();
 
         //CountGameTime = false;

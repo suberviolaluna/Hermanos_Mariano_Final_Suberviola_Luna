@@ -52,6 +52,14 @@ public class NewDialogueManager : MonoBehaviour
     }
     void Start()
     {
+        GameManager gm = FindObjectOfType<GameManager>();
+        String levelCode = "Z" + gm.GetZone(gm.levelIndex) + "N" + gm.LevelIndexer(gm.level);
+        if (gm.LevelIndexer(gm.level) != 4 && GameManager.StarsDictionary[levelCode])
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
         ui = FindObjectOfType<UserInterface>();
         cutM = FindObjectOfType<CutsceneManager>();
 
